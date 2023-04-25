@@ -1,9 +1,9 @@
 FROM alpine:3.17
 MAINTAINER LD
 
-ENV REFRESHED_AT {{DATE_TIME}}
+ENV REFRESHED_AT 2023-04-25_1021
 
-ENV NODE_VERSION={{NODE_VERSION}}
+ENV NODE_VERSION=v18.16.0
 
 RUN apk upgrade --update \
  && apk add --no-cache curl make gcc g++ linux-headers paxctl musl-dev \
