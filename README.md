@@ -28,15 +28,34 @@ To see all supported versions: <https://hub.docker.com/r/aliengreen/node-alpine/
 
 If you need more packages installed (e.g. make, gcc for compiling some native Node modules, or imagemagick etc.) base your new container on this one and you can use `apk` package manager that Alpine provides. For instance:
 
-```
+```shell
 apk search --update imagemagick
 ```
 
 or:
 
-```
+```shell
 apk add --update make gcc g++ python linux-header
 ```
+
+
+
+## New Release
+
+Container needs periodic maintenance to update Alpine Linux or update NodeJS. For that we need to make changes in the Dockerfile for a specific version of Alpine Linux or NodeJS. 
+
+ - Alpine Linux update - you should make manual change in the Dockerfile. e.g. `FROM alpine:3.6` can be replaced with a newer version `FROM alpine:3.17`
+ - NodeJS update - For that we can use `release.sh` script by invoking termninal command:
+
+ ```shell
+ $ ./release.sh v18.16.0
+ ```
+
+> Where `v18.16.0` is a NodeJS version number
+
+If command execution is done without errors you can see 4 new tags: `18.16.0`, `18.16.0-runit`, `18.16` and `18.16-runit`. 
+
+> Note: The `release.sh` script first removes old tags from GitHub and then recreates new ones. So, if the tags with above names already exist it will be removed, but it OK don't panic.
 
 
 
