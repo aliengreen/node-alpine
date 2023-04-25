@@ -55,7 +55,7 @@ Container needs periodic maintenance to update Alpine Linux or update NodeJS. Fo
 
 If command execution is done without errors you can see 4 new tags: `18.16.0`, `18.16.0-runit`, `18.16` and `18.16-runit`. 
 
-> Note: The `release.sh` script first removes old tags from GitHub and then recreates new ones. So, if the tags with above names already exist it will be removed, but it OK don't panic.
+> Note: The `release.sh` script first removes old tags from GitHub and then recreates new ones. So, if the tags with above names already exist it will be removed, but it OK, don't panic.
 
 
 
@@ -63,5 +63,3 @@ If command execution is done without errors you can see 4 new tags: `18.16.0`, `
 
 [MIT](LICENSE)
 
-[docker-img]: https://img.shields.io/badge/docker-ready-blue.svg
-[docker-url]: https://hub.docker.com/r/aliengreen/node-alpine/
