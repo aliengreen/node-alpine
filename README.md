@@ -11,10 +11,10 @@ Alpine-Linux-based, tiny Docker-container for NodeJS. This is really small image
 Insert at the top of your Dockerfile:
 
 ```
-FROM aliengreenllc/node-alpine:20-alpine3.17
+FROM aliengreenllc/node-alpine:current-alpine3.18
 ```
 
-To see all supported versions: <https://hub.docker.com/r/aliengreen/node-alpine/tags/>
+To see all supported versions: <https://hub.docker.com/r/aliengreenllc/node-alpine/tags/>
 
 
 
@@ -41,29 +41,29 @@ Container needs periodic maintenance to update Alpine Linux or NodeJS. For that 
  - Alpine Linux-NodeJS update - We are using `release.sh` script by invoking termninal command:
 
  ```shell
- $ ./release.sh --tag 20-alpine3.17
+ $ ./release.sh --tag current-alpine3.18
  ```
 
-> Where `20-alpine3.17` is a NodeJS Docker official image tag name.
+> Where `current-alpine3.18` is a NodeJS Docker official image tag name.
 
-If command execution is done without errors you can see new tag: `20-alpine3.17`, by running command `git tag`
+If command execution is done without errors you can see new tag: `current-alpine3.18`, by running command `git tag`
 
 > Note: The `release.sh` script first removes old tag from GitHub and then recreates new one. So, if the tag with above name already exist it will be removed, but it OK, don't panic.
 
 If you need fast search for official NodeJS tag you can invoke `release.sh` script with specific argument:
 
 ```shell
-$ ./release.sh --tag 20-
+$ ./release.sh --search current-
 ```
 
-Tag names organised as follows: first number `20` is a NodeJS version number and last `3.17` is Alpine-Linux version number.
+Tag names organised as follows: first number `current` is a NodeJS version number and last `3.17` is Alpine-Linux version number.
 
 ### Useful commands
 
 ```shell
-$ docker build -t aliengreenllc/node-alpine:20-alpine3.17 .
-$ docker run -t aliengreenllc/node-alpine:20-alpine3.17
-$ docker push aliengreenllc/node-alpine:20-alpine3.17
+$ docker build -t aliengreenllc/node-alpine:current-alpine3.18 .
+$ docker run -t aliengreenllc/node-alpine:current-alpine3.18
+$ docker push aliengreenllc/node-alpine:current-alpine3.18
 
 $ docker compose up -d --force-recreate --no-deps name
 $ docker exec -it name sh
@@ -71,8 +71,6 @@ $ docker exec -it name sh
 $ docker compose logs -f name
 $ docker history name
 ```
-
-
 
 
 
