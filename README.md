@@ -56,7 +56,7 @@ If you need fast search for official NodeJS tag you can invoke `release.sh` scri
 $ ./release.sh --search current-
 ```
 
-Tag names organised as follows: first number `current` is a NodeJS version number and last `3.17` is Alpine-Linux version number.
+Tag names organised as follows: first number `current` is a NodeJS version number and last `3.18` is Alpine-Linux version number.
 
 ### Useful commands
 
