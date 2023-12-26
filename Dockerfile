@@ -1,8 +1,8 @@
 # FROM node:20-alpine3.17
-FROM node:{{NODE_TAG}}
+FROM node:current-alpine3.18
 MAINTAINER Alien Green LLC
 
-ENV REFRESHED_AT {{DATE_TIME}}
+ENV REFRESHED_AT 2023-12-26_1517
 ENV HOME_DIR=/opt/app  
 ENV BIN_DIR=/opt/bin
 
